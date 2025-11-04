@@ -11,7 +11,20 @@ async function main() {
   output(noOs);
 
   let largeNum = await input("Please enter a number larger than 10: ");
+
+  while (largeNum <= 10){
+    if (largeNum <= 10){
+      largeNum = await input("That number was too small, please enter a number larger than 10: ");
+    }
+
+  }
+  
   let smolNum = await input("Please enter a number smaller than 10: ");
+
+  while (smolNum >= 10){
+    if (smolNum >= 10){
+      smolNum = await input("Please enter a number smaller than 10: ");
+    }
+  }
   output(largeNum % smolNum);
 }
-

@@ -23,7 +23,7 @@ async function main() {
 
   while (smolNum >= 10){
     if (smolNum >= 10){
-      smolNum = await input("Please enter a number smaller than 10: ");
+      smolNum = await input("That number was too large, please enter a number smaller than 10: ");
     }
   }
   output(largeNum % smolNum);

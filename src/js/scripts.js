@@ -7,7 +7,7 @@ async function main() {
   let fname = await input("Please enter your first name: ");
   let lname = await input("Please enter your last name: ");
   let fullName = fname + " " + lname;
-  noOs = fullName.replaceAll("o", "a");
+  let noOs = fullName.replaceAll("o", "a");
   output(noOs);
 
   let largeNum = await input("Please enter a number larger than 10: ");
@@ -16,15 +16,20 @@ async function main() {
     if (largeNum <= 10){
       largeNum = await input("That number was too small, please enter a number larger than 10: ");
     }
-
   }
   
-  let smolNum = await input("Please enter a number smaller than 10: ");
+  let smolNum = await input("Please enter a number larger than 0 and smaller than 10: ");
 
-  while (smolNum >= 10){
+  while (smolNum >= 10 || smolNum <=0){
     if (smolNum >= 10){
       smolNum = await input("That number was too large, please enter a number smaller than 10: ");
     }
-  }
+    try{
+     if (smolNum <= 0) throw smolNum = await input("You cannot divide by 0, please enter a number larger than 0 and smaller than 10: ");
+    } catch (error){
+
+    }
+
   output(largeNum % smolNum);
+}
 }
